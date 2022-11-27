@@ -4,6 +4,7 @@
 78 -> третьей цифры нет
 32679 -> 6 */
 
+//Ввод числа
 int Prompt(string message)
 {
     System.Console.Write($"{message} >");
@@ -11,24 +12,29 @@ int Prompt(string message)
     return answer;
 }
 
+//Отработка функции ввода
 int number = Prompt("Введите число");
 
+//Проверка на 3-хзначность
 if (number < 100)
 {
     System.Console.WriteLine("Третьей цифры у такого числа нет");
 }
 
+//Проверка максимального дмъиапазона переменных в программе
 if (number >= 999999999)
 {
     System.Console.WriteLine("Такие числа не входят в диапазон переменных программы");
 }
 
+//Условие и нахождение 3-го числа (без использования строк только математически) 
+//Условие для 3-хзначного числа
 if (number >= 100 & number < 1000)
 {
     int result = number % 10;
     System.Console.WriteLine("Третья цифра у числа  " + result);
 }
-else
+else //Условие для чисел больше 3-хзначных
 {
     int n = 100;
 
@@ -38,7 +44,7 @@ else
         if (number2 >= 10 & number2 <= 100)
         {
             double result = (number % n - number % (n / 10)) / (n / 10);
-            if (number2 == 100)
+            if (number2 == 100) //Дополнительный шаг для некоторых чисел (пример:100258, 100894 и т.д.)
             {
                 result = 0;
                 System.Console.WriteLine("Третья цифра у числа  " + result);

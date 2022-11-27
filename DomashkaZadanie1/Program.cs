@@ -4,14 +4,14 @@
 782 -> 8
 918 -> 1
 422 -> 2*/
-
+//Запрос числа
 int Prompt(string message)
 {
     System.Console.Write($"{message} >");
     int answer = Convert.ToInt32(Console.ReadLine());
     return answer;
 }
-
+//Проверка числа на 3-хзначность
 bool ValidateNumber(int number)
 {
     if (number >= 100 && number < 1000)
@@ -22,7 +22,7 @@ bool ValidateNumber(int number)
     System.Console.WriteLine("Число не трехзначное");
     return false;
 }
-
+//Выполнение в программе
 int number = Prompt("Введите число");
 if (ValidateNumber(number))
 {

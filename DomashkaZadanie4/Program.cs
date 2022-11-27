@@ -4,6 +4,7 @@
 7 -> да
 1 -> нет*/
 
+//Приглашение ко вводу числа (порядкового номера дня недели)
 int Prompt(string message)
 {
     System.Console.Write($"{message} >  ");
@@ -11,8 +12,10 @@ int Prompt(string message)
     return answer;
 }
 
+
 int day = Prompt("Введите день недели с помощью его порядкового номера (1 - понедельник и т.д.");
 
+//Условие вывода формулировки какой день недели введен по порядковому номеру (числу)
  switch(day) 
  {
      case 1: System.Console.WriteLine("Понедельник - рабочий (НЕ ВЫХОДНОЙ)"); break;
